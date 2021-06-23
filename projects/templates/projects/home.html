@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+     <link rel="icon" href="../../../../favicon.ico">
+    <title>Hemchand Pidikiti</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Hemchand Pidikiti</h1>
+        <p class="lead text-muted">#TechEnthusiast | Devoloper | Opensource contributor</p>
+        <p>
+          <a href="mailto:hemchand200074@gmail.com" class="btn btn-primary my-2">Mail me</a>
+          <a href="https://www.linkedin.com/in/hemchand-pidikiti" target="_blank" class="btn btn-secondary my-2">Connect on Linkedin</a>
+        </p>
+        <img src="{% static 'me.jpg' %}" height=300></img>
+      </div>
+      </section>
+
+  <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              {% for project in projects.all %}
+              <div class="col-md-4">
+              <a href="{% url 'detail' project.id %}">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="{{ project.images.url }}">
+                  <div class="card-body">
+                    <p class="card-text"> {{ project.summary }} </p>
+                  </div>
+                </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+</main>
+
+<footer class="text-muted py-5 text-center">
+  <div class="container">
+    <p>Made with Django | Copyleft</p>
+    </div>
+</footer>
+<script src="{% static '/js/bootstrap.min.js' %}" ></script>
+<script src="{% static '/jquery-3.6.0.min.js' %}"></script>
+
+
+
+
+  </body>
+</html>

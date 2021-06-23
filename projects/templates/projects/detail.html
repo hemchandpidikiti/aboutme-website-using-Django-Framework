@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Hemchand Pidikiti</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Project Detail</h1>
+          <p class="lead text-muted">{{ project.summary }}</p>
+          <img src="{{ project.images.url }}" height="300" />
+          <p class="lead text-muted">{{ project.description }}</p>
+          <p>
+            <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="text-muted py-5 text-center">
+      <div class="container">
+        <p>Made with Django | Copyleft</p>
+        </div>
+    </footer>
+    <script src="{% static '/js/bootstrap.min.js' %}" ></script>
+    <script src="{% static '/jquery-3.6.0.min.js' %}"></script>
+
+</body>
+</html>
