@@ -18,17 +18,17 @@
     <main role="main">
 
       <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Project Detail</h1>
+        <h1 class="jumbotron-heading">Project Detail</h1>
+        <div class="container bg-warning">
           <p class="lead text-muted">{{ project.summary }}</p>
           <img src="{{ project.images.url }}" height="300" />
-          <p class="lead text-muted">{{ project.description }}</p>
-          <p>
-            <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
-          </p>
+          <p class="lead text-muted ">{{ project.description }}</p>
+
         </div>
       </section>
-
+      <p style="text-align:center">
+        <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+      </p>
     </main>
 
     <footer class="text-muted py-5 text-center">
