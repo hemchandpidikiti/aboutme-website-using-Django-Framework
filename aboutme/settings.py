@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'aboutme.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'aboutmedb',
-        'USER': 'postgres',
-        'PASSWORD': 'swecha',
-        'HOST': 'localhost',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
